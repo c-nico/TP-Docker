@@ -1,5 +1,17 @@
 # Travaux Pratiques : Docker
 
+## Run TP
+
+```
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo apt update
+sudo apt install git -y
+git clone https://github.com/c-nico/TP-Docker.git
+cd TP-Docker
+sudo docker-compose up
+```
+
 ## Objectifs
 
 L'objectif de ce TP est de créer des conteneurs et d'automatiser la phase de construction et de déploiement des conteneurs dans un contexte Ops. Pour réaliser ce TP, il vous faudra respecter scrupuleusement les conventions de nommage et de configuration demandées, afin que le bot de correction soit en mesure de vérifier que tout fonctionne comme attendu. Cela passe également par le respect des formats de données utilisés. Il vous sera demandé de construire deux conteneurs communiquant entre eux. Ces deux conteneurs présentent des APIs simple permettant de renvoyer des données au format JSON via le protocole HTTP. Ces deux applicatifs sont fournis et doivent uniquement être déployés, il ne s'agit donc pas de développement mais de mise en production, orienté système et services.
